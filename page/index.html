@@ -81,24 +81,31 @@
             font-size: small;
             text-decoration: double;
         }
-        .cards-container{
-            width: 9em;
-            height: 11em ;
-            background-color: aliceblue;
-            max-width: 200px;
+        .cards-container {
+            border: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            aspect-ratio: 13 / 19;
+            height: 170px;
+            background: url(../src/assets/img/placeholder-card-normal.webp) no-repeat;
             background-position: center;
             background-size: contain;
-            background-repeat: no-repeat;
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Horizontally center */
+            align-items: center; /* Vertically center */
+            color: #07D95A;
+        }
 
+        .cards-container:hover {
+            filter: drop-shadow(0px 0px 13px rgb(75, 172, 75));
         }
-        .cards-container:hover{
-    
-        }
+
         #gk{
             position: absolute;
+            left: 31em;
             bottom: 3px;
-            left: 24.5em;
-            
+           
         }
         #rb{
             position: absolute;
@@ -116,42 +123,58 @@
         }
         #cb2{
             position: absolute;
-            bottom: 2em;
-            left: 14.5em;
+            bottom: 3em;
+            left: 15em;
            
         }
         #cb1{
             position: absolute;
-            bottom: 2em;
-            right: 14.5em;
+            bottom: 3em;
+            right: 15em;
            
         }
 
         #cmr{
             position: absolute;
             
-            top: 13em;
-            left: 11em;
+            top: 14em;
+            left: 14em;
         }
         #cml{
             position: absolute;
            
-            top: 13em;
-            right: 11em;
+            top: 14em;
+            right: 14em;
         }
         #cmd{
             position: absolute;
-            top: 12em;
-            left: 24.5em;
+            top: 13em;
+            left: 31em;
             
         }
         #lw{
             
             position: absolute;
-           
-            top: 2em;
             right: 11em;
+            bottom: 36em;
         
+        }
+        #rw{
+            
+            position: absolute;
+            left: 11em;
+            bottom: 36em;
+        
+        }
+        #st{
+            position: absolute;
+            left: 31em;
+            bottom: 38em;
+
+           
+        }
+        .plus{
+            position: absolute;
         }
     </style>
 
@@ -165,35 +188,61 @@
         <div class="container">
             
             <div class="terrain">
-            <!-- <div class="cards-container"  id="st"></div>
-            <div class="cards-container" id="rw"></div>-->
+            <button class="cards-container"  id="st">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
+            </button> 
+
+            <button class="cards-container" id="rw">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
+            </button>
+
             <button class="cards-container" id="lw">
-                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
             </button>
+
             <button class="cards-container" id="cmd">
-                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
             </button>
+
             <button class="cards-container" id="cml">
-                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
             </button>
+
             <button class="cards-container" id="cmr">
-                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
             </button>
+
             <button class="cards-container" id="cb1">
-                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
             </button>
+
             <button class="cards-container" id="cb2">
-                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
             </button> 
+
             <button class="cards-container" id="lb">
-                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
             </button> 
+
             <button class="cards-container" id="rb">
-                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
             </button>
+
             <button class="cards-container" id="gk">
-                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+                <svg class="" viewBox="0 0 36 42" fill="none" width="36"><path d="M18.6275 41.711L18.3137 41.0298C18.1146 41.1215 17.8854 41.1215 17.6863 41.0298L17.3726 41.711L17.6863 41.0298L1.18627 33.4311C0.920355 33.3087 0.75 33.0427 0.75 32.7499V8.7248C0.75 8.42506 0.928458 8.15411 1.20383 8.03575L17.7038 0.943648C17.8929 0.862375 18.1071 0.862375 18.2962 0.943648L34.7962 8.03575C35.0715 8.15411 35.25 8.42506 35.25 8.7248V32.7499C35.25 33.0427 35.0796 33.3087 34.8137 33.4311L18.3137 41.0298L18.6275 41.711Z" stroke="currentColor" stroke-width="1.5"></path></svg>
+                <div class="plus">+</div>
             </button>
+
             </div>
             <div class="side_bar"></div>
         </div>
