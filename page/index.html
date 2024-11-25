@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA FC 25</title>
+    <script src="../script/main.js" defer></script>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url(../src/assets/img/frontpage_bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            height: 100vh;
+            position: relative;
+        }
+        .all-container{
+            height: 100vh;
+        }
+
+        /* Add a dark blur overlay */
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+            backdrop-filter: blur(5px); /* Adds blur to the background */
+            z-index: 1;
+        }
+
+        /* Content styles */
+        .content {
+            
+            position: relative;
+            z-index: 3; /* Content above the overlay */
+            color: white;
+            font-family: Arial, sans-serif;
+            top: 3em;
+            left: 20em;
+            
+            
+        }
+
+        .terrain {
+            background-image: url(../src/assets/img/field-bg.png);
+            background-size: cover; /* Ensure the field image scales properly */
+            background-position: center;
+            width: 58em; /* Adjust field width */
+            height: 40em; /* Adjust field height */
+            position: relative;
+            z-index: 3; /* Ensure it is above the blur overlay */
+           
+            
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            z-index: 3; /* Ensure the container is above the overlay */
+            position: relative;
+            width: 100vw;
+            gap: 3em;
+        }
+        .side_bar{
+            width: 25em;
+            height: 40em;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+        }
+        .soutitre{
+            font-size: small;
+            text-decoration: double;
+        }
+        .cards-container{
+            width: 9em;
+            height: 11em ;
+            background-color: aliceblue;
+            max-width: 200px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+        .cards-container:hover{
+    
+        }
+        #gk{
+            position: absolute;
+            bottom: 3px;
+            left: 24.5em;
+            
+        }
+        #rb{
+            position: absolute;
+            
+            top: 24em;
+            left: 4em;
+        }
+        #lb{
+            
+            position: absolute;
+            
+            top: 24em;
+            right: 4em;
+        
+        }
+        #cb2{
+            position: absolute;
+            bottom: 2em;
+            left: 14.5em;
+           
+        }
+        #cb1{
+            position: absolute;
+            bottom: 2em;
+            right: 14.5em;
+           
+        }
+
+        #cmr{
+            position: absolute;
+            
+            top: 13em;
+            left: 11em;
+        }
+        #cml{
+            position: absolute;
+           
+            top: 13em;
+            right: 11em;
+        }
+        #cmd{
+            position: absolute;
+            top: 12em;
+            left: 24.5em;
+            
+        }
+        #lw{
+            
+            position: absolute;
+           
+            top: 2em;
+            right: 11em;
+        
+        }
+    </style>
+
+    <div class="overlay">
+    </div>
+    <div class="all-container">
+        <div class="content">
+            <h3>EA FC 25 Squad Builder</h3>
+            <p class="soutitre">Create EA FC 25 Squads</p>
+        </div>
+        <div class="container">
+            
+            <div class="terrain">
+            <!-- <div class="cards-container"  id="st"></div>
+            <div class="cards-container" id="rw"></div>-->
+            <button class="cards-container" id="lw">
+                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+            </button>
+            <button class="cards-container" id="cmd">
+                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+            </button>
+            <button class="cards-container" id="cml">
+                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+            </button>
+            <button class="cards-container" id="cmr">
+                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+            </button>
+            <button class="cards-container" id="cb1">
+                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+            </button>
+            <button class="cards-container" id="cb2">
+                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+            </button> 
+            <button class="cards-container" id="lb">
+                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+            </button> 
+            <button class="cards-container" id="rb">
+                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+            </button>
+            <button class="cards-container" id="gk">
+                <img src="../src/assets/img/placeholder-card-normal.webp" alt="">
+            </button>
+            </div>
+            <div class="side_bar"></div>
+        </div>
+    </div>
+</body>
+</html>
