@@ -14,7 +14,7 @@
             box-sizing: border-box;
         }
         body {
-            background-image: url(../src/assets/img/frontpage_bg.png);
+            background-image: url(../src/assets/img/lineup-hero.png);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -24,16 +24,6 @@
         }
         .all-container{
             height: 100vh;
-        }
-
-        /* Add a dark blur overlay */
-        .overlay {
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
-            backdrop-filter: blur(5px); /* Adds blur to the background */
-            z-index: 1;
         }
 
         /* Content styles */
@@ -60,6 +50,13 @@
            
             
         }
+        .terrain{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(4,1fr);
+            place-items: center;
+        }
+
 
         .container {
             display: flex;
@@ -71,6 +68,9 @@
             width: 100vw;
             gap: 3em;
         }
+
+        
+
         .side_bar{
             width: 25em;
             height: 40em;
@@ -103,76 +103,104 @@
 
         #gk{
             position: absolute;
-            left: 31em;
-            bottom: 3px;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start:4 ;
+            grid-row-end: 5;
            
         }
         #rb{
             position: absolute;
-            
-            top: 24em;
-            left: 4em;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start:3 ;
+            grid-row-end: 4;
         }
         #lb{
             
             position: absolute;
             
-            top: 24em;
-            right: 4em;
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start:3 ;
+            grid-row-end: 4;
         
         }
         #cb2{
             position: absolute;
-            bottom: 3em;
-            left: 15em;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start:4 ;
+            grid-row-end: 5;
+            margin-bottom: 3em;
            
         }
         #cb1{
             position: absolute;
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start:4 ;
+            grid-row-end: 5;
             bottom: 3em;
-            right: 15em;
            
         }
 
         #cmr{
             position: absolute;
-            
-            top: 14em;
-            left: 14em;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start:2 ;
+            grid-row-end: 3;
+            top: 6em;
         }
         #cml{
             position: absolute;
-           
-            top: 14em;
-            right: 14em;
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start:2 ;
+            grid-row-end: 3;
+            top: 6em;
         }
         #cmd{
             position: absolute;
-            top: 13em;
-            left: 31em;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start:2 ;
+            grid-row-end: 3;
+            top: 4em;
             
         }
         #lw{
             
             position: absolute;
-            right: 11em;
-            bottom: 36em;
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start:1;
+            grid-row-end: 2;
+            top: 3em;
+            right: 8em;
         
         }
         #rw{
             
             position: absolute;
-            left: 11em;
-            bottom: 36em;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start:1;
+            grid-row-end: 2;
+            top: 3em;
+            left    : 8em;
         
         }
         #st{
             position: absolute;
-            left: 31em;
-            bottom: 38em;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start:1;
+            grid-row-end: 2;
 
            
-        }
+        } 
         .plus{
             position: absolute;
         }
