@@ -1,1 +1,58 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Codes</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .code-container {
+            margin-top: 10px;
+        }
+        .category {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Category Codes Viewer</h1>
+
+    <div class="category">
+        <button onclick="showCodes('category1')">Show Codes for Category 1</button>
+        <div id="category1" class="code-container hidden">
+            <p><strong>Category 1 Codes:</strong></p>
+            <ul>
+                <li>Code 101: Initialize system</li>
+                <li>Code 102: Load configuration</li>
+                <li>Code 103: Start process</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="category">
+        <button onclick="showCodes('category2')">Show Codes for Category 2</button>
+        <div id="category2" class="code-container hidden">
+            <p><strong>Category 2 Codes:</strong></p>
+            <ul>
+                <li>Code 201: Connect to server</li>
+                <li>Code 202: Authenticate user</li>
+                <li>Code 203: Fetch data</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showCodes(categoryId) {
+            const categoryDiv = document.getElementById(categoryId);
+            if (categoryDiv.classList.contains('hidden')) {
+                categoryDiv.classList.remove('hidden');
+            } else {
+                categoryDiv.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
