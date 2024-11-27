@@ -80,4 +80,6 @@ fetch(filePath)
   
   // })
 
+ const gkbutton = document.querySelector("#gk");
+ 
 
