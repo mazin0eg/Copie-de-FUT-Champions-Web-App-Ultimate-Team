@@ -66,5 +66,18 @@ fetch(filePath)
     console.error("Error loading the JSON file:", error);
   });
 
+  const buttonshow = document.querySelector("#showAllPlayersBtn");
+
+  // buttonshow.addEventListener('click' , ()=>{
+  //   console.log('clicked');
+    
+    const playercontainer = document.querySelector(".theall");
+    // playercontainer.classList.toggle('hidden')
+    buttonshow.addEventListener("click", () => {
+      // Toggle the visibility of the section
+      playercontainer.classList.toggle("hidden");
+    });
+  
+  // })
 
 

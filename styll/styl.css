@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-image: url(../src/assets/img/lineup-hero.png);
@@ -8,6 +9,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    min-height: 100vh;
 }
 .all-container{
     height: 80vh;
@@ -184,7 +186,7 @@ body {
 } 
 .plus{
     position: absolute;
-    bottom: 6.3em;
+    bottom: 5.3em;
 }
 
 .chimastry{
@@ -198,16 +200,42 @@ body {
 }
 
 #card-container {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-color: #4d331f;
-background-image: url(../src/assets/img/lineup-hero.png);
-background-repeat: no-repeat;
-background-size: cover;
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
 
 
 }
+#card-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
 
 .player-card {
     background-image: url(../src/assets/img/badge_gold.webp);
@@ -227,15 +255,15 @@ background-size: cover;
 .player-card .photo{
     margin-bottom: -4px;
     position: relative;
-    top: 64px;
-    right: -7px;
+    top: 41px;
+    right: -23px;
     width: 125px;
 }
 
 .rating {
     position: absolute;
-    top: 45px;
-    left: 39px;
+    top: 25px;
+    left: 29px;
     font-size: 31px;
     font-weight: bold;
     color: #4d331f;
@@ -243,8 +271,8 @@ background-size: cover;
 
 .position {
     position: absolute;
-    top: 104px;
-    right: 163px;
+    top: 88px;
+    right: 133px;
     font-size: 16px;
     font-weight: bold;
     color: #4d331f;
@@ -257,11 +285,11 @@ background-size: cover;
 ;
     justify-content: center;
     position: relative;
-    top: 62px;
-    left: 10px;
-    width: 178px;
+    top: 32px;
+    left: 6px;
+    width: 156px;
     color: #4d331f;
-    font-size: small;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -272,33 +300,41 @@ flex-direction: column;
 color: #4d331f;
 }
 .logo{
-    margin-top: 10px;
     position: absolute;
-    top: 262px;
-    right: 89px;
-    width: 22px;
+    top: 242px;
+    right: 66px;
+    width: 19px;
 }
 .name{
     position: relative;
-    top: 69px;
+    top: 46px;
     left: 5px;
     color: #4d331f;
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: bold;
 }
 .flag{
     position: relative;
-    top: 70px;
-    left: -14px;
-    width: 21px;
+    top: 35px;
+    left: 65px;
+    width: 16px;
 }
 .theall{
 
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex
+;
+background: transparent;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 60%;
+    position: absolute;
+    bottom: 10em;
+    z-index: 5;
+    /* height: 117px; */
+    left: 12em;
 }
 .replasent{
     display: flex
@@ -433,4 +469,22 @@ color: #4d331f;
 
 .price h4 {
     margin-right: 15px;
+}
+
+.show-all-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #07D95A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.show-all-btn:hover {
+    background-color: #05b94d;
 }
