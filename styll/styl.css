@@ -215,9 +215,41 @@ body {
 
 
 }
+
+#card-container2 {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
 #card-container::-webkit-scrollbar {
     width: 6px;
-  }
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
   
   /* Track */
   ::-webkit-scrollbar-track {
@@ -237,6 +269,43 @@ body {
     background: black; 
   }
 
+
+  #card-container2::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
 .player-card {
     background-image: url(../src/assets/img/badge_gold.webp);
     background-repeat: no-repeat;
@@ -320,6 +389,24 @@ color: #4d331f;
     width: 16px;
 }
 .theall{
+
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex
+;
+background: transparent;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 60%;
+    position: absolute;
+    bottom: 10em;
+    z-index: 5;
+    /* height: 117px; */
+    left: 12em;
+}
+
+.theall2{
 
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -488,3 +575,1124 @@ background: transparent;
 .show-all-btn:hover {
     background-color: #05b94d;
 }
+
+.gk-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .gk-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+  #card-container2::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .st-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .st-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+  
+
+
+
+
+
+
+
+  .cb1-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .cb1-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+
+
+
+
+
+
+
+  .cb2-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .cb2-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+
+
+
+
+  .rb-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .rb-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+
+
+
+
+  .lb-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .lb-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+
+
+
+
+  .cmd-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .cmd-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+  .cml-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .cml-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+
+
+
+  .cmr-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .cmr-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+
+
+  .cmr-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .cmr-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+
+
+
+
+
+
+  .lw-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .lw-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+
+
+
+
+  .rw-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .rw-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+  .remplacent-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59vw;
+    height: 60vh;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    top: 210px;
+    left: 203px;
+    color: #059b41;
+    border-radius: 15px;
+    border: solid;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    color: #059b41;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
+
+  .remplacent-modal::-webkit-scrollbar {
+    width: 6px;
+  }#card-container {
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #059b41;
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border: solid
+
+
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #059b41; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
+
+
+
+  
+
