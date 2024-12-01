@@ -109,8 +109,14 @@ addPlayerButton.addEventListener("click", () => {
           <select name="position" required>
             <option value="GK">Goalkeeper (GK)</option>
             <option value="DEF">Defender (DEF)</option>
-            <option value="MID">Midfielder (MID)</option>
-            <option value="FWD">Forward (FWD)</option>
+            <option value="CMD">Midfielder (CMD)</option>
+            <option value="CMR">Midfielder (CMR)</option>
+            <option value="CML">Midfielder (CML)</option>
+            <option value="ST">Sticker (ST)</option>
+            <option value="lw">Left whing (lw)</option>
+             <option value="rw">Right whing (rw)</option>
+              <option value="rb">right back (rb)</option>
+               <option value="lb">Left back (lb)</option>
           </select>
         
            <input type="number" name="pace" placeholder="Pace" required>
@@ -208,6 +214,7 @@ formContainer.addEventListener("submit", (e) => {
 const gkbutton = document.querySelector("#gk");
 gkbutton.addEventListener("click", (e) => {
   e.stopPropagation();
+  
   const finded = players.filter((plr) => plr.position === "GK");
   let modal = document.querySelector(".gk-modal");
   if (!modal) {
@@ -215,7 +222,9 @@ gkbutton.addEventListener("click", (e) => {
     modal.className = "gk-modal";
     document.body.appendChild(modal);
   }
+  
   modal.innerHTML = "";
+  
   const closeButton = document.createElement("div");
   closeButton.className = "close-button";
   closeButton.innerHTML = "✖";
@@ -223,6 +232,7 @@ gkbutton.addEventListener("click", (e) => {
     modal.classList.add("hidden");
   });
   modal.appendChild(closeButton);
+  
   finded.forEach(player => {
     const card = document.createElement("div");
     card.className = "player-card";
@@ -245,30 +255,42 @@ gkbutton.addEventListener("click", (e) => {
 
     card.addEventListener("click", () => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
-    
+      
       if (targetPositionButton) {
         // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          gkbutton.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
-
-          // Close the modal
-          modal2.classList.add("hidden");
+        const existingCard = targetPositionButton.querySelector(".player-card");
+        
+        if (existingCard) {
+          // If a player card already exists, add a click event to reopen the modal
+          existingCard.addEventListener("click", () => {
+            modal.classList.remove("hidden");
+          });
         }
+        
+        // Clear any existing content in the button
+        targetPositionButton.innerHTML = "";
+        gkbutton.classList.remove('cards-container');
+        
+        // Append the selected player card to the button
+        targetPositionButton.appendChild(card);
+        
+        // Add the reopen modal behavior to the newly added card
+        card.addEventListener("click", () => {
+          modal.classList.remove("hidden");
+        });
+        
+        // Close the modal
+        modal.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
     });
     modal.appendChild(card);
   });
+  
   modal.classList.remove("hidden");
 });
+
 
 const stbutton = document.querySelector("#st");
 stbutton.addEventListener("click", (e) => {
@@ -308,24 +330,34 @@ stbutton.addEventListener("click", (e) => {
       <img class="logo" src="${player.logo}" alt="${player.club}">
     `;
 
-    card.addEventListener("click", () => {
+   card.addEventListener("click", () => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
-    
+      
       if (targetPositionButton) {
         // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          stbutton.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
+        const existingCard = targetPositionButton.querySelector(".player-card");
 
-          // Close the modal
-          modal2.classList.add("hidden");
+        if (existingCard) {
+          // Add a click event to the existing card to reopen the modal
+          existingCard.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+          });
         }
+
+        // Clear any existing content in the button
+        targetPositionButton.innerHTML = "";
+        stbutton.classList.remove('cards-container');
+
+        // Append the selected player card to the button
+        targetPositionButton.appendChild(card);
+
+        // Add the reopen modal behavior to the newly added card
+        card.addEventListener("click", () => {
+          modal2.classList.remove("hidden");
+        });
+
+        // Close the modal
+        modal2.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
@@ -335,10 +367,14 @@ stbutton.addEventListener("click", (e) => {
   modal2.classList.remove("hidden");
 });
 
-const cb1button = document.querySelector("#cb1");
+const cb1button = document.querySelector(".cb1");
+
 cb1button.addEventListener("click", (e) => {
   e.stopPropagation();
+
   const finded = players.filter((plr) => plr.position === "CB");
+console.log(finded);
+
   let modal2 = document.querySelector(".cb1-modal");
   if (!modal2) {
     modal2 = document.createElement("div");
@@ -346,6 +382,7 @@ cb1button.addEventListener("click", (e) => {
     document.body.appendChild(modal2);
   }
   modal2.innerHTML = "";
+
   const closeButton = document.createElement("div");
   closeButton.className = "close-button";
   closeButton.innerHTML = "✖";
@@ -353,9 +390,11 @@ cb1button.addEventListener("click", (e) => {
     modal2.classList.add("hidden");
   });
   modal2.appendChild(closeButton);
+
   finded.forEach(player => {
     const card = document.createElement("div");
     card.className = "player-card";
+
     card.innerHTML = `
       <div class="rating">${player.rating}</div>
       <div class="position">${player.position}</div>
@@ -375,39 +414,52 @@ cb1button.addEventListener("click", (e) => {
 
     card.addEventListener("click", () => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
-    
+      
       if (targetPositionButton) {
         // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          cb1button.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
+        const existingCard = targetPositionButton.querySelector(".player-card");
 
-          // Close the modal
-          modal2.classList.add("hidden");
+        if (existingCard) {
+          // Add a click event to the existing card to reopen the modal
+          existingCard.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+          });
         }
+
+        // Clear any existing content in the button
+        targetPositionButton.innerHTML = "";
+        cb1button.classList.remove('cards-container');
+
+        // Append the selected player card to the button
+        targetPositionButton.appendChild(card);
+
+        // Add the reopen modal behavior to the newly added card
+        card.addEventListener("click", () => {
+          modal2.classList.remove("hidden");
+        });
+
+        // Close the modal
+        modal2.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
     });
+
     modal2.appendChild(card);
   });
+
   modal2.classList.remove("hidden");
 });
 
 
-const cb2button = document.querySelector("#cb2");
+
+
+const cb2button = document.querySelector(".cb2");
 
 cb2button.addEventListener("click", (e) => {
   e.stopPropagation();
 
   const finded = players.filter((plr) => plr.position === "CB");
-
   let modal2 = document.querySelector(".cb2-modal");
   if (!modal2) {
     modal2 = document.createElement("div");
@@ -444,34 +496,45 @@ cb2button.addEventListener("click", (e) => {
       <img class="flag" src="${player.flag}" alt="${player.nationality}">
       <img class="logo" src="${player.logo}" alt="${player.club}">
     `;
+
     card.addEventListener("click", () => {
-      const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
-    
+      const targetPositionButton = document.querySelector(`.cb2`);
+      
       if (targetPositionButton) {
         // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          cb2button.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
+        const existingCard = targetPositionButton.querySelector(".player-card");
 
-          // Close the modal
-          modal2.classList.add("hidden");
+        if (existingCard) {
+          // Add a click event to the existing card to reopen the modal
+          existingCard.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+          });
         }
+
+        // Clear any existing content in the button
+        targetPositionButton.innerHTML = "";
+        cb2button.classList.remove('cards-container');
+
+        // Append the selected player card to the button
+        targetPositionButton.appendChild(card);
+
+        // Add the reopen modal behavior to the newly added card
+        card.addEventListener("click", () => {
+          modal2.classList.remove("hidden");
+        });
+
+        // Close the modal
+        modal2.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
     });
-
     modal2.appendChild(card);
   });
 
   modal2.classList.remove("hidden");
 });
+
 
 const rbbutton = document.querySelector("#rb");
 
@@ -516,24 +579,35 @@ rbbutton.addEventListener("click", (e) => {
       <img class="flag" src="${player.flag}" alt="${player.nationality}">
       <img class="logo" src="${player.logo}" alt="${player.club}">
     `;
+    
     card.addEventListener("click", () => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
-    
+      
       if (targetPositionButton) {
         // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          rbbutton.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
+        const existingCard = targetPositionButton.querySelector(".player-card");
 
-          // Close the modal
-          modal2.classList.add("hidden");
+        if (existingCard) {
+          // Add a click event to the existing card to reopen the modal
+          existingCard.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+          });
         }
+
+        // Clear any existing content in the button
+        targetPositionButton.innerHTML = "";
+        rbbutton.classList.remove('cards-container');
+
+        // Append the selected player card to the button
+        targetPositionButton.appendChild(card);
+
+        // Add the reopen modal behavior to the newly added card
+        card.addEventListener("click", () => {
+          modal2.classList.remove("hidden");
+        });
+
+        // Close the modal
+        modal2.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
@@ -590,26 +664,35 @@ lbbutton.addEventListener("click", (e) => {
     `;
     card.addEventListener("click", () => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
-    
+
       if (targetPositionButton) {
         // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          lbbutton.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
+        const existingCard = targetPositionButton.querySelector(".player-card");
 
-          // Close the modal
-          modal2.classList.add("hidden");
+        if (existingCard) {
+          // Add a click event to reopen the modal when clicking the existing card
+          existingCard.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+          });
         }
+
+        // Clear the button's content and assign the new card
+        targetPositionButton.innerHTML = "";
+        lbbutton.classList.remove('cards-container');
+        targetPositionButton.appendChild(card);
+
+        // Add the reopen modal behavior to the newly added card
+        card.addEventListener("click", () => {
+          modal2.classList.remove("hidden");
+        });
+
+        // Close the modal
+        modal2.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
     });
+
     modal2.appendChild(card);
   });
 
@@ -659,24 +742,33 @@ cmdbutton.addEventListener("click", (e) => {
       <img class="flag" src="${player.flag}" alt="${player.nationality}">
       <img class="logo" src="${player.logo}" alt="${player.club}">
     `;
+
     card.addEventListener("click", () => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
-    
-      if (targetPositionButton) {
-        // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          cmdbutton.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
 
-          // Close the modal
-          modal2.classList.add("hidden");
+      if (targetPositionButton) {
+        const existingCard = targetPositionButton.querySelector(".player-card");
+
+        // Check if a player card already exists in the position button
+        if (existingCard) {
+          // Add a click event to reopen the modal when clicking the existing card
+          existingCard.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+          });
         }
+
+        // Assign the selected player to the position button
+        targetPositionButton.innerHTML = "";
+        cmdbutton.classList.remove("cards-container");
+        targetPositionButton.appendChild(card);
+
+        // Add click event to the new card to reopen the modal
+        card.addEventListener("click", () => {
+          modal2.classList.remove("hidden");
+        });
+
+        // Close the modal
+        modal2.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
@@ -688,6 +780,7 @@ cmdbutton.addEventListener("click", (e) => {
   modal2.classList.remove("hidden");
 });
 
+
 const cmlbutton = document.querySelector("#cml");
 
 cmlbutton.addEventListener("click", (e) => {
@@ -695,7 +788,7 @@ cmlbutton.addEventListener("click", (e) => {
 
   const finded = players.filter((plr) => plr.position === "CML");
 
-  let modal2 = document.querySelector(".cmd-modal");
+  let modal2 = document.querySelector(".cml-modal");
   if (!modal2) {
     modal2 = document.createElement("div");
     modal2.className = "cml-modal";
@@ -731,24 +824,33 @@ cmlbutton.addEventListener("click", (e) => {
       <img class="flag" src="${player.flag}" alt="${player.nationality}">
       <img class="logo" src="${player.logo}" alt="${player.club}">
     `;
+    
     card.addEventListener("click", () => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
-    
+
       if (targetPositionButton) {
         // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          cmlbutton.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
-
-          // Close the modal
-          modal2.classList.add("hidden");
+        const existingCard = targetPositionButton.querySelector(".player-card");
+        
+        if (existingCard) {
+          // Reopen the modal when clicking an already assigned card
+          existingCard.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+          });
         }
+        
+        // Assign the selected player to the position button
+        targetPositionButton.innerHTML = "";
+        cmlbutton.classList.remove('cards-container');
+        targetPositionButton.appendChild(card);
+
+        // Add a click event to the new card to reopen the modal
+        card.addEventListener("click", () => {
+          modal2.classList.remove("hidden");
+        });
+
+        // Close the modal
+        modal2.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
@@ -804,25 +906,32 @@ cmrbutton.addEventListener("click", (e) => {
       <img class="logo" src="${player.logo}" alt="${player.club}">
     `;
 
-    // Add click event to move the card to its corresponding position
     card.addEventListener("click", () => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
-    
-      if (targetPositionButton) {
-        // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          cmrbutton.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
 
-          // Close the modal
-          modal2.classList.add("hidden");
+      if (targetPositionButton) {
+        const existingCard = targetPositionButton.querySelector(".player-card");
+
+        // Check if a player card already exists in the position button
+        if (existingCard) {
+          // Add a click event to reopen the modal when clicking the existing card
+          existingCard.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+          });
         }
+
+        // Assign the selected player to the position button
+        targetPositionButton.innerHTML = "";
+        cmrbutton.classList.remove("cards-container");
+        targetPositionButton.appendChild(card);
+
+        // Add click event to the new card to reopen the modal
+        card.addEventListener("click", () => {
+          modal2.classList.remove("hidden");
+        });
+
+        // Close the modal
+        modal2.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
@@ -833,7 +942,6 @@ cmrbutton.addEventListener("click", (e) => {
 
   modal2.classList.remove("hidden");
 });
-
 
 
 
@@ -868,7 +976,7 @@ lwbutton.addEventListener("click", (e) => {
       <div class="rating">${player.rating}</div>
       <div class="position">${player.position}</div>
       <img class="photo" src="${player.photo}" alt="${player.name}">
-      <h2 class="name" >${player.name}</h2>
+      <h2 class="name">${player.name}</h2>
       <div class="stats">
         <span>PAC ${player.pace}</span>
         <span>SHO ${player.shooting}</span>
@@ -883,34 +991,41 @@ lwbutton.addEventListener("click", (e) => {
 
     card.addEventListener("click", () => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
-    
-      if (targetPositionButton) {
-        // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          lwbutton.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
 
-          // Close the modal
-          modal2.classList.add("hidden");
+      if (targetPositionButton) {
+        const existingCard = targetPositionButton.querySelector(".player-card");
+
+        // Check if a player card already exists in the position button
+        if (existingCard) {
+          // Add a click event to reopen the modal when clicking the existing card
+          existingCard.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+          });
         }
+
+        // Assign the selected player to the position button
+        targetPositionButton.innerHTML = "";
+        lwbutton.classList.remove("cards-container");
+        targetPositionButton.appendChild(card);
+
+        // Add click event to the new card to reopen the modal
+        card.addEventListener("click", () => {
+          modal2.classList.remove("hidden");
+        });
+
+        // Close the modal
+        modal2.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
     });
+
     modal2.appendChild(card);
   });
 
-  
-
   modal2.classList.remove("hidden");
-
 });
+
 
 const rwbutton = document.querySelector("#rw");
 
@@ -943,7 +1058,7 @@ rwbutton.addEventListener("click", (e) => {
       <div class="rating">${player.rating}</div>
       <div class="position">${player.position}</div>
       <img class="photo" src="${player.photo}" alt="${player.name}">
-      <h2 class="name" >${player.name}</h2>
+      <h2 class="name">${player.name}</h2>
       <div class="stats">
         <span>PAC ${player.pace}</span>
         <span>SHO ${player.shooting}</span>
@@ -955,24 +1070,33 @@ rwbutton.addEventListener("click", (e) => {
       <img class="flag" src="${player.flag}" alt="${player.nationality}">
       <img class="logo" src="${player.logo}" alt="${player.club}">
     `;
+
     card.addEventListener("click", () => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
     
       if (targetPositionButton) {
-        // Check if the button already contains a player card
-        if (targetPositionButton.querySelector(".player-card")) {
-          // If there is already a player card, alert the user
-          alert("A player is already assigned to this position.");
-        } else {
-          // Clear any existing content in the button
-          targetPositionButton.innerHTML = "";
-          rwbutton.classList.remove('cards-container')
-          // Append the player card to the button
-          targetPositionButton.appendChild(card);
+        const existingCard = targetPositionButton.querySelector(".player-card");
 
-          // Close the modal
-          modal2.classList.add("hidden");
+        // Check if a player card already exists in the position button
+        if (existingCard) {
+          // Add a click event to reopen the modal when clicking the existing card
+          existingCard.addEventListener("click", () => {
+            modal2.classList.remove("hidden");
+          });
         }
+
+        // Assign the selected player to the position button
+        targetPositionButton.innerHTML = "";
+        rwbutton.classList.remove("cards-container");
+        targetPositionButton.appendChild(card);
+
+        // Add click event to the new card to reopen the modal
+        card.addEventListener("click", () => {
+          modal2.classList.remove("hidden");
+        });
+
+        // Close the modal
+        modal2.classList.add("hidden");
       } else {
         alert(`No target button found for position: ${player.position}`);
       }
@@ -982,7 +1106,6 @@ rwbutton.addEventListener("click", (e) => {
   });
 
   modal2.classList.remove("hidden");
-
 });
 
 

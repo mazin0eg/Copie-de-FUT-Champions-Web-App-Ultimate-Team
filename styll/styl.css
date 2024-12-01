@@ -109,7 +109,7 @@ body {
     grid-row-end: 4;
 
 }
-#cb2{
+.cb2{
     position: absolute;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -118,13 +118,13 @@ body {
     margin-bottom: 3em;
    
 }
-#cb1{
-    position: absolute;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start:4 ;
-    grid-row-end: 5;
-    bottom: 3em;
+.cb1{
+  position: absolute;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  top: -55px;
    
 }
 
@@ -1698,7 +1698,7 @@ background: transparent;
     position: absolute;
     top: 0;
     left: 0;
-    width: 30vw;
+    width: 18vw;
     height: 60vh;
     color: #059b41;
     background-color: rgba(0, 0, 0, 0.7);
@@ -1709,8 +1709,8 @@ background: transparent;
     z-index: 1000;
     backdrop-filter: blur(10px);
     overflow-y: scroll;
-    top: 210px;
-    left: 203px;
+    top: 83px;
+    left: 1079px;
     color: #059b41;
     border-radius: 15px;
     border: solid;
@@ -1718,13 +1718,13 @@ background: transparent;
     /* flex-wrap: wrap; */
     padding: 10px;
     align-items: center;
-    scrollbar-width:none ;
+    scrollbar-width: none;
 
   }
 
   #addPlayerForm input,select,option{
-  height: 100px;
-    width: 450px;
+    height: 100px;
+    width: 80%;
     color: #688573;
     border-radius: 5px;
     border: solid;
