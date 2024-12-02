@@ -59,13 +59,13 @@ function renderPlayers() {
         <button class="delete-btn hidden" data-index="${index}">❌</button>
       `;
     }
-    // Add event listener to show the delete button on focus
+   
     card.addEventListener("click", () => {
       const deleteBtn = card.querySelector(".delete-btn");
       deleteBtn.classList.toggle("hidden"); // Toggle the visibility of the delete button
     });
 
-    // Add event listener for deleting the player
+    
     card.querySelector(".delete-btn").addEventListener("click", (e) => {
       e.stopPropagation(); // Prevent the card's click event from firing
       deletePlayer(index);
@@ -257,7 +257,7 @@ gkbutton.addEventListener("click", (e) => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
       
       if (targetPositionButton) {
-        // Check if the button already contains a player card
+       
         const existingCard = targetPositionButton.querySelector(".player-card");
         
         if (existingCard) {
@@ -334,7 +334,7 @@ stbutton.addEventListener("click", (e) => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
       
       if (targetPositionButton) {
-        // Check if the button already contains a player card
+       
         const existingCard = targetPositionButton.querySelector(".player-card");
 
         if (existingCard) {
@@ -416,7 +416,7 @@ console.log(finded);
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
       
       if (targetPositionButton) {
-        // Check if the button already contains a player card
+       
         const existingCard = targetPositionButton.querySelector(".player-card");
 
         if (existingCard) {
@@ -501,7 +501,7 @@ cb2button.addEventListener("click", (e) => {
       const targetPositionButton = document.querySelector(`.cb2`);
       
       if (targetPositionButton) {
-        // Check if the button already contains a player card
+       
         const existingCard = targetPositionButton.querySelector(".player-card");
 
         if (existingCard) {
@@ -584,7 +584,7 @@ rbbutton.addEventListener("click", (e) => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
       
       if (targetPositionButton) {
-        // Check if the button already contains a player card
+       
         const existingCard = targetPositionButton.querySelector(".player-card");
 
         if (existingCard) {
@@ -666,7 +666,7 @@ lbbutton.addEventListener("click", (e) => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
 
       if (targetPositionButton) {
-        // Check if the button already contains a player card
+       
         const existingCard = targetPositionButton.querySelector(".player-card");
 
         if (existingCard) {
@@ -829,7 +829,7 @@ cmlbutton.addEventListener("click", (e) => {
       const targetPositionButton = document.querySelector(`#${player.position.toLowerCase()}`);
 
       if (targetPositionButton) {
-        // Check if the button already contains a player card
+       
         const existingCard = targetPositionButton.querySelector(".player-card");
         
         if (existingCard) {
